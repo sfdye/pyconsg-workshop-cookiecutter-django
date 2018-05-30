@@ -7,7 +7,7 @@ Hello, gooooood morning!
 
 > What is the best practice for XXX in Django?
 
-> How can I enable HTTPS for Django
+> How can I enable HTTPS for Django?
 
 > What is the recommendation project structure for Django?
 
@@ -17,7 +17,7 @@ If you ever ask yourself asking these questions, cookiecutter-django might just 
 
 ![cookiecutter](https://camo.githubusercontent.com/c2095c350e36abaafd738dcdc6cdc9e7d585d69e/68747470733a2f2f7261772e6769746875622e636f6d2f617564726579722f636f6f6b69656375747465722f336163303738333536616466356131613732303432646665373265626661346139636435656633382f6c6f676f2f636f6f6b69656375747465725f6d656469756d2e706e67)
 
-## Pre-requisites
+## Prerequisites
 
 * Git
 * Docker
