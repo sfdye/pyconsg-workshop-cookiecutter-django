@@ -1,8 +1,8 @@
 # pyconsg-workshop-cookiecutter-django
 
-Hi, gooooood morning! 
+Hello, gooooood morning! 
 
-:cookie: Welcome to the cookicutter-django workshop! My name is Liuyang. I am one of the maintainers of [cookiecutter-django]. Today allow me to introduce this awesome project to you. Hopefully you will find it useful.
+:cookie: Welcome to the cookiecutter-django workshop! My name is Liuyang. I am one of the maintainers of [cookiecutter-django]. Today allow me to introduce this awesome project to you. Hopefully you will find it useful.
 
 
 > What is the best practice for XXX in Django?
@@ -138,8 +138,61 @@ Fill in the email, password and repeat password, click "Sign up". You will proba
 
 ![image](https://user-images.githubusercontent.com/1016390/40727683-fbc65cc4-645a-11e8-8c36-ab2aa2baccbb.png)
 
-### Github OAuth login
+### Adding Github Social Login
 
+By default, cookiecutter-django installs https://github.com/pennersr/django-allauth for you, so we can quickly enable Github social login feature.
+
+1. Open the project in your text editor or IDE
+2. Navigate to `base.py`
+3. Add the following line to THIRD_PARTY_APPS. So it will look like this:
+```
+THIRD_PARTY_APPS = [
+    'crispy_forms',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.github', # <-- we just added this
+    'rest_framework',
+]
+```
+4. Refresh. Now you will see the Github button in the sign in page (http://0.0.0.0:8000/accounts/login/)
+![image](https://user-images.githubusercontent.com/1016390/40729018-0196b880-645e-11e8-8d33-3f8b8f5d25f0.png)
+
+
+If you click the click the link now, you will probably get a `SocialApp matching query does not exist`. That is because we haven't configured a Github Oauth app for django-allauth yet. 
+
+#### Create superuser
+To do this, we need login to Django admin (or modify the database directly). 
+
+First let's create a superuser. Note that we now need to run the `mange.py` commands inside a Docker container.
+```
+# Open a new terminal tab and cd the right location
+$ docker-compose -f local.yml run django python manage.py createsuperuser
+```
+Now we can log in to Django admin: http://0.0.0.0:8000/admin
+
+#### Create a Github Oauth app
+
+1. Go to: https://github.com/settings/developers
+2. Click "New Oauth App"
+3. For Homepage URL and Authorization callback URL, just put http://0.0.0.0:8000
+4. Click "Register Application"
+5. Now you have a 
+
+#### Adding the Client ID and Client Secret 
+![image](https://user-images.githubusercontent.com/1016390/40729330-b40f5508-645e-11e8-88f6-a6c4e34945d3.png)
+
+Click "Social Application", and then "Add Social Application". Fill the Client ID and Client Secret from the Oauth app we just registered with Github. Don't forget to link the site with the social app by double clicking on the "example.com", or click the right arrow.
+
+![image](https://user-images.githubusercontent.com/1016390/40729614-557d723a-645f-11e8-9e9f-7754459b55c0.png)
+
+Once this is done. Go back to sign in page (http://0.0.0.0:8000/accounts/login/) and sign in with Github.
+
+![image](https://user-images.githubusercontent.com/1016390/40730028-4d8d4a36-6460-11e8-9e7b-594baa90930f.png)
+
+![image](https://user-images.githubusercontent.com/1016390/40730075-6d3959f6-6460-11e8-95c3-8b6fad6a6f54.png)
+
+Great, it works!
 
 ### Deploy to heroku
 
