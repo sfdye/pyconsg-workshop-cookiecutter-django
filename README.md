@@ -1,0 +1,1 @@
+# pyconsg-workshop-cookiecutter-django
