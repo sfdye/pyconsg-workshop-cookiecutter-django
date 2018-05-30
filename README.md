@@ -2,7 +2,11 @@
 
 PyCon Singapore: https://pycon.sg/schedule/
 
-Welcome to the cookicutter-django workshop!
+:cookie: Welcome to the cookicutter-django workshop!
+
+cookiecutter: https://github.com/audreyr/cookiecutter
+
+cookiecutter-django: https://github.com/pydanny/cookiecutter
 
 ## Pre-requisites
 
