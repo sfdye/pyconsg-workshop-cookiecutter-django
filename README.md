@@ -1,12 +1,17 @@
 # pyconsg-workshop-cookiecutter-django
 
-PyCon Singapore: https://pycon.sg/schedule/
-
 :cookie: Welcome to the cookicutter-django workshop!
 
-cookiecutter: https://github.com/audreyr/cookiecutter
+> What is the best practice for XXX in Django?
+> How can I enable HTTPS for Django
+> What is the recommendation project structure for Django?
+> How to integration Docker with Django?
 
-cookiecutter-django: https://github.com/pydanny/cookiecutter
+If you ever ask yourself asking these questions, cookiecutter-django is the right answer for you.
+
+![cookiecutter](https://camo.githubusercontent.com/c2095c350e36abaafd738dcdc6cdc9e7d585d69e/68747470733a2f2f7261772e6769746875622e636f6d2f617564726579722f636f6f6b69656375747465722f336163303738333536616466356131613732303432646665373265626661346139636435656633382f6c6f676f2f636f6f6b69656375747465725f6d656469756d2e706e67)
+
+cookiecutter: https://github.com/audreyr/cookiecutter
 
 ## Pre-requisites
 
@@ -17,10 +22,14 @@ cookiecutter-django: https://github.com/pydanny/cookiecutter
 
 ## Workshop
 
+Docker is an extremely useful tool to speed up the development and deployment cycle. We will use Docker throughout this workshop. It is available for all the major platforms. When if doubt, please reach out to the workshop conductor.
+
 * Install Docker
 for [Mac](https://docs.docker.com/docker-for-mac/install/) or [Windows](https://store.docker.com/editions/community/docker-ce-desktop-windows)
 
-* Install cookiecutter CLI
+* Install cookiecutter CLI 
+
+cookicutter is a great tool developed by Audrey to quickly create a project based on some templates. In this workshop, we will use the [cookiecutter-django](https://github.com/pydanny/cookiecutter)) template which is specically baked with Django best practices.
 
 ```bash
 
@@ -33,11 +42,13 @@ $ pip install cookiecutter
 
 * Createa a new Django project using cookiecutter
 
-You will answer a few questions.
-
-
+Later you will be asked a series of questions. Based on your answer, a customerized project will be generated. For the purpose of this workshop, you may use the follow answer as a guide.
 
 ```bash
+# Here cookiecutter CLI is taking the first parameter as the template source
+# In this example, it's a Github repo and cookiecutter will use the latest master at this 
+# point of time. The following questions may vary depending on when you run the command 
+
 $ cookiecutter https://github.com/pydanny/cookiecutter-django
 
 project_name [My Awesome Project]: my-favorite-cookie (or whatever cool name you like)
