@@ -171,13 +171,14 @@ $ docker-compose -f local.yml run django python manage.py createsuperuser
 ```
 Now we can log in to Django admin: http://0.0.0.0:8000/admin
 
-#### Create a Github Oauth app
+#### Create a Github OAuth app
 
 1. Go to: https://github.com/settings/developers
 2. Click "New Oauth App"
 3. For Homepage URL and Authorization callback URL, just put http://0.0.0.0:8000
 4. Click "Register Application"
-5. Now you have a 
+
+![image](https://user-images.githubusercontent.com/1016390/40730300-e8305038-6460-11e8-8e0e-3c8c93df1959.png)
 
 #### Adding the Client ID and Client Secret 
 ![image](https://user-images.githubusercontent.com/1016390/40729330-b40f5508-645e-11e8-88f6-a6c4e34945d3.png)
@@ -195,7 +196,7 @@ Once this is done. Go back to sign in page (http://0.0.0.0:8000/accounts/login/)
 Great, it works!
 
 ### Deploy to heroku
-
+If we have time to cover this
 
 [cookiecutter]: https://github.com/audreyr/cookiecutter
 [cookiecutter-django]: https://github.com/pydanny/cookiecutter
