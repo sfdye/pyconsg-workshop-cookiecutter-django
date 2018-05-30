@@ -155,7 +155,7 @@ THIRD_PARTY_APPS = [
     'rest_framework',
 ]
 ```
-4. Refresh. Now you will see the Github button in the sign in page (http://0.0.0.0:8000/accounts/login/)
+4. Save and refresh. Now you will see the Github button in the sign in page (http://0.0.0.0:8000/accounts/login/)
 ![image](https://user-images.githubusercontent.com/1016390/40729018-0196b880-645e-11e8-8d33-3f8b8f5d25f0.png)
 
 
