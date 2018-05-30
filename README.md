@@ -195,8 +195,15 @@ Once this is done. Go back to the sign in page (http://0.0.0.0:8000/accounts/log
 
 Voilà, it works!
 
-### Deploy to heroku
-If we have time to cover this
+### The end
+
+Now you have seen the power of [cookiecutter-django] and how easy it is to create a beautiful application with it. You may ask, why not just use the built-in `django-admin startproject`? Well, the default is too simple and not very useful if you want to build something fast and production-ready. For me, `cookiecutter` is kind of like `create-react-app` or `vue-cli`, but for Django. As you can see, there are tons of other features not covered in this workshop. Give it a shot and you will love them.
+
+![image](https://user-images.githubusercontent.com/1016390/40730739-f3392b02-6461-11e8-90ad-50ec72c0cf19.png)
+
+### More questions?
+
+If you have any question regarding `cookiecutter-django`, feel free to open an issue [here](https://github.com/pydanny/cookiecutter-django/issues/new/choose) or shout out at the [Gitter](https://gitter.im/pydanny/cookiecutter-django) channel. The friendly community will help you out.
 
 [cookiecutter]: https://github.com/audreyr/cookiecutter
 [cookiecutter-django]: https://github.com/pydanny/cookiecutter
