@@ -171,7 +171,7 @@ $ docker-compose -f local.yml run django python manage.py createsuperuser
 ```
 Now we can log in to Django admin: http://0.0.0.0:8000/admin
 
-#### Create a Github OAuth app
+#### Create a Github Oauth app
 
 1. Go to: https://github.com/settings/developers
 2. Click "New Oauth App"
@@ -183,17 +183,17 @@ Now we can log in to Django admin: http://0.0.0.0:8000/admin
 #### Adding the Client ID and Client Secret 
 ![image](https://user-images.githubusercontent.com/1016390/40729330-b40f5508-645e-11e8-88f6-a6c4e34945d3.png)
 
-Click "Social Application", and then "Add Social Application". Fill the Client ID and Client Secret from the Oauth app we just registered with Github. Don't forget to link the site with the social app by double clicking on the "example.com", or click the right arrow.
+Click "Social applications", and then "Add Social Application". Fill the Client ID and Client Secret from the Oauth app we just registered with Github. Don't forget to link the site with this social app by double clicking on the "example.com", or click the right arrow.
 
 ![image](https://user-images.githubusercontent.com/1016390/40729614-557d723a-645f-11e8-9e9f-7754459b55c0.png)
 
-Once this is done. Go back to sign in page (http://0.0.0.0:8000/accounts/login/) and sign in with Github.
+Once this is done. Go back to the sign in page (http://0.0.0.0:8000/accounts/login/) and sign in with Github again.
 
 ![image](https://user-images.githubusercontent.com/1016390/40730028-4d8d4a36-6460-11e8-9e7b-594baa90930f.png)
 
 ![image](https://user-images.githubusercontent.com/1016390/40730075-6d3959f6-6460-11e8-95c3-8b6fad6a6f54.png)
 
-Great, it works!
+Voilà, it works!
 
 ### Deploy to heroku
 If we have time to cover this
