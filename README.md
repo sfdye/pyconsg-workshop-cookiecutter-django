@@ -1,6 +1,7 @@
 # pyconsg-workshop-cookiecutter-django
 
-:cookie: Welcome to the cookicutter-django workshop!
+Hi, morning! :cookie: Welcome to the cookicutter-django workshop! My name is Liuyang. I am one of the maintainers of [cookiecutter-django]. Today allow me to introduce this awesome to you. Hopefully you will find it useful.
+
 
 > What is the best practice for XXX in Django?
 > How can I enable HTTPS for Django
@@ -29,7 +30,7 @@ for [Mac](https://docs.docker.com/docker-for-mac/install/) or [Windows](https://
 
 * Install cookiecutter CLI 
 
-cookicutter is a great tool developed by Audrey to quickly create a project based on some templates. In this workshop, we will use the [cookiecutter-django](https://github.com/pydanny/cookiecutter)) template which is specically baked with Django best practices.
+cookicutter is a great tool developed by Audrey to quickly create a project based on some templates. In this workshop, we will use the [cookiecutter-django] template which is specifically baked with many Django best practices.
 
 ```bash
 
@@ -122,7 +123,7 @@ $ docker-compose -f local.yml up
 
 Now we are running the images we just built, and turn them into running containers! This will start your database, apply migrations and start the developement server. This step should be pretty fast compared the last one.
 
-Now you have a running Django project. See it in action at 0.0.0.0:8000.
+Now you have a running Django project. See it in action at http://0.0.0.0:8000.
 
 ![image](https://user-images.githubusercontent.com/1016390/40727172-eaac09da-6459-11e8-8ce0-547a9a42647e.png)
 
@@ -131,12 +132,14 @@ As you can probably see, it has a nice UI (powered by Boostrap 4), django-debug-
 ## Register an account
 ![image](https://user-images.githubusercontent.com/1016390/40727459-841ff338-645a-11e8-925f-17453ec437fe.png)
 
-Fill in the email, password and repeat password, click "Sign up". You will probably wonder, where did the confirmation email go? Don't worry. cookiecutter-django actually generates a local email server (mailhog in the `local.yml`) for you. Now let's navigate to 0.0.0.0:8025. The email is just lying in the mailbox. Awesome!
+Fill in the email, password and repeat password, click "Sign up". You will probably wonder, where did the confirmation email go? Don't worry. cookiecutter-django actually generates a local email server (mailhog in the `local.yml`) for you. Now let's navigate to http://0.0.0.0:8025. The email is just lying in the mailbox. Awesome!
 
 ![image](https://user-images.githubusercontent.com/1016390/40727683-fbc65cc4-645a-11e8-8c36-ab2aa2baccbb.png)
-
 
 
 * Github OAuth login
 * Deploy to heroku
 * (Optional) Make it HTTPS
+
+
+[cookiecutter-django]:https://github.com/pydanny/cookiecutter
