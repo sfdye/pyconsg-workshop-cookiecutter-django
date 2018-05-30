@@ -108,15 +108,34 @@ $ docker-compose version
 $ cd my_favorite_cookie # change to your project name
 
 # Build docker image using docker-compose
-# This step will probably take a while, depending on your network. Grab a coffee if you like.
-# This will install all the dependencies required to run the project
-# like your database, your OS dependenceis, your requirements.txt and etc.
 $ docker-compose -f local.yml build
+```
 
+Now, this step will probably take a while, depending how fast your network is. I strongly recommend you to get a :coffee:. Essentially Docker is building your images based on the definition in the `local.yml` file. This file is for your development envionment. Similarly, you will also find `production.yml` in the project. 
+
+This will install all the dependecies needed to run your project, like the database, your OS dependenceis, your requirements.txt and etc. If you are interested, take a look at the logs.
+
+```
 # Run the docker image we just built 
-# This will run your migrations and trigger the python manage.py runserver
 $ docker-compose -f local.yml up
 ```
+
+Now we are running the images we just built, and turn them into running containers! This will start your database, apply migrations and start the developement server. This step should be pretty fast compared the last one.
+
+Now you have a running Django project. See it in action at 0.0.0.0:8000.
+
+![image](https://user-images.githubusercontent.com/1016390/40727172-eaac09da-6459-11e8-8ce0-547a9a42647e.png)
+
+As you can probably see, it has a nice UI (powered by Boostrap 4), django-debug-toolbar, a working user registration system ready for use. Now let's try to create an account.
+
+## Register an account
+![image](https://user-images.githubusercontent.com/1016390/40727459-841ff338-645a-11e8-925f-17453ec437fe.png)
+
+Fill in the email, password and repeat password, click "Sign up". You will probably wonder, where did the confirmation email go? Don't worry. cookiecutter-django actually generates a local email server (mailhog in the `local.yml`) for you. Now let's navigate to 0.0.0.0:8025. The email is just lying in the mailbox. Awesome!
+
+![image](https://user-images.githubusercontent.com/1016390/40727683-fbc65cc4-645a-11e8-8c36-ab2aa2baccbb.png)
+
+
 
 * Github OAuth login
 * Deploy to heroku
