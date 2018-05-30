@@ -1,18 +1,21 @@
 # pyconsg-workshop-cookiecutter-django
 
-Hi, morning! :cookie: Welcome to the cookicutter-django workshop! My name is Liuyang. I am one of the maintainers of [cookiecutter-django]. Today allow me to introduce this awesome to you. Hopefully you will find it useful.
+Hi, gooooood morning! 
+
+:cookie: Welcome to the cookicutter-django workshop! My name is Liuyang. I am one of the maintainers of [cookiecutter-django]. Today allow me to introduce this awesome project to you. Hopefully you will find it useful.
 
 
 > What is the best practice for XXX in Django?
+
 > How can I enable HTTPS for Django
+
 > What is the recommendation project structure for Django?
+
 > How to integration Docker with Django?
 
-If you ever ask yourself asking these questions, cookiecutter-django is the right answer for you.
+If you ever ask yourself asking these questions, cookiecutter-django might just be the answer you are looking for.
 
 ![cookiecutter](https://camo.githubusercontent.com/c2095c350e36abaafd738dcdc6cdc9e7d585d69e/68747470733a2f2f7261772e6769746875622e636f6d2f617564726579722f636f6f6b69656375747465722f336163303738333536616466356131613732303432646665373265626661346139636435656633382f6c6f676f2f636f6f6b69656375747465725f6d656469756d2e706e67)
-
-cookiecutter: https://github.com/audreyr/cookiecutter
 
 ## Pre-requisites
 
@@ -30,10 +33,9 @@ for [Mac](https://docs.docker.com/docker-for-mac/install/) or [Windows](https://
 
 * Install cookiecutter CLI 
 
-cookicutter is a great tool developed by Audrey to quickly create a project based on some templates. In this workshop, we will use the [cookiecutter-django] template which is specifically baked with many Django best practices.
+[cookiecutter] is a great tool developed to quickly start a project based on a certain "template". In this workshop, we will use the [cookiecutter-django] template which is specifically designed for Django with many best practices baked in.
 
 ```bash
-
 # for Mac
 $ brew install cookiecutter
 
@@ -98,7 +100,7 @@ debug [n]: n
 
 That's it. You now have a production-ready Django project.
 
-## Run the project using Docker
+### Run the project using Docker
 
 ```
 # Make sure docker and docker-compose are installed correctly
@@ -129,17 +131,18 @@ Now you have a running Django project. See it in action at http://0.0.0.0:8000.
 
 As you can probably see, it has a nice UI (powered by Boostrap 4), django-debug-toolbar, a working user registration system ready for use. Now let's try to create an account.
 
-## Register an account
+### Register an account
 ![image](https://user-images.githubusercontent.com/1016390/40727459-841ff338-645a-11e8-925f-17453ec437fe.png)
 
 Fill in the email, password and repeat password, click "Sign up". You will probably wonder, where did the confirmation email go? Don't worry. cookiecutter-django actually generates a local email server (mailhog in the `local.yml`) for you. Now let's navigate to http://0.0.0.0:8025. The email is just lying in the mailbox. Awesome!
 
 ![image](https://user-images.githubusercontent.com/1016390/40727683-fbc65cc4-645a-11e8-8c36-ab2aa2baccbb.png)
 
-
-* Github OAuth login
-* Deploy to heroku
-* (Optional) Make it HTTPS
+### Github OAuth login
 
 
-[cookiecutter-django]:https://github.com/pydanny/cookiecutter
+### Deploy to heroku
+
+
+[cookiecutter]: https://github.com/audreyr/cookiecutter
+[cookiecutter-django]: https://github.com/pydanny/cookiecutter
