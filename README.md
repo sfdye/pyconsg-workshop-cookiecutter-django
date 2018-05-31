@@ -115,6 +115,15 @@ $ docker-compose -f local.yml build
 ```
 
 Note: if you get a `Couldn't connect to Docker daemon at http+unix://var/run/docker.sock` error, append the docker command with `sudo`, or add the current user to the `docker` group:
+
+If you face some errors while docker build, you may need to change to another Docker registery mirror. (e.g. https://registry.docker-cn.com). Because there might be some problems with NUS Wifi.
+
+For Mac:
+![image](https://user-images.githubusercontent.com/1016390/40764052-033c1514-64da-11e8-81c5-ac5b1ce423ac.png)
+
+For Ubuntu:
+https://docs.docker.com/registry/recipes/mirror/#configure-the-docker-daemon
+
 ```
 # Replace ${USER} with your username if it doesn't work
 # After this command finishes, you need to log out and log in for it to take effect
