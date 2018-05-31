@@ -11,7 +11,7 @@ Hello, gooooood morning!
 
 > What is the recommendation project structure for Django?
 
-> How to integration Docker with Django?
+> How to integrate Docker with Django?
 
 If you ever ask yourself asking these questions, cookiecutter-django might just be the answer you are looking for.
 
