@@ -71,7 +71,7 @@ Choose from 1, 2, 3, 4, 5 [1]: 1
 timezone [UTC]: enter
 windows [n]: Choose accordingly
 use_pycharm [n]: n
-use_docker [n]: y (Important!)
+use_docker [n]: y (***Important!***)
 Select postgresql_version:
 1 - 10.3
 2 - 10.2
@@ -80,7 +80,7 @@ Select postgresql_version:
 5 - 9.5
 6 - 9.4
 7 - 9.3
-Choose from 1, 2, 3, 4, 5, 6, 7 [1]: 4 (Important!)
+Choose from 1, 2, 3, 4, 5, 6, 7 [1]: 4 (***Important!***)
 Select js_task_runner:
 1 - None
 2 - Gulp
@@ -88,7 +88,7 @@ Choose from 1, 2 [1]: 1
 custom_bootstrap_compilation [n]: n
 use_compressor [n]: n
 use_celery [n]: n
-use_mailhog [n]: y
+use_mailhog [n]: y (***Important!***)
 use_sentry [n]: n
 use_whitenoise [n]: n
 use_heroku [n]: y
@@ -112,6 +112,13 @@ $ cd my_favorite_cookie # change to your project name
 
 # Build docker image using docker-compose
 $ docker-compose -f local.yml build
+```
+
+Note: if you get a `Couldn't connect to Docker daemon at http+unix://var/run/docker.sock` error, append the docker command with `sudo`, or add the current user to the `docker` group:
+```
+# Replace ${USER} with your username if it doesn't work
+# After this command finishes, you need to log out and log in for it to take effect
+$ sudo usermod -aG docker ${USER} 
 ```
 
 Now, this step will probably take a while, depending how fast your network is. I strongly recommend you to get a :coffee:. Essentially Docker is building your images based on the definition in the `local.yml` file. This file is for your development envionment. Similarly, you will also find `production.yml` in the project. 
